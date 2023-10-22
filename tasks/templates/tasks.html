@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>tasks</h1>
+
+    <ul>
+    {% for tarea in tareas %}
+    <li> 
+        <a href=' {% url "task_detail" tarea.id %}'>
+            {% if tarea.importante %}
+            <p><strong>{{tarea.titulo}} - {{tarea.user.username}}</strong></p>
+            {% else %}
+            <p>{{tarea.titulo}} - {{tarea.user.username}}</p>
+            {% endif %}
+            <p>{{tarea.descripcion}}</p>
+            <p>{{tarea.fecha_completada|date:'M j Y:i'}}</p>
+        </a>
+
+    </li>
+    {% endfor %} 
+    </ul>
+    
+{% endblock content %}

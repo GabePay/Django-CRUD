@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section class='card card-body'>
+        <h1 class="display-1 text-center">Django App</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, incidunt sapiente. Mollitia earum quod eum consectetur aut totam facilis porro tempora incidunt? Ratione nostrum aperiam quia rerum velit illum commodi.
+        Saepe optio provident possimus! Iusto sunt sequi totam repudiandae modi corrupti fugit, nesciunt minima esse, delectus est doloremque corporis iure necessitatibus! Delectus libero nulla nisi ipsum, ex ab laudantium eum.</p>
+
+        <div class='text-center'>
+            <a class='btn btn-primary' href="{% url "login" %}">Iniciar sesion</a>
+            <a class='btn btn-secondary' href="{% url "singup" %}"> Registrarse</a>
+        </div>
+    </section>
+
+{% endblock content %}

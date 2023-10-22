@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form class='card card-body' action="/singup/" method="post">
+                    <h1 class='text-center'>Formulario de registro</h1>
+                    {{check}}
+                    {{error}}
+
+                    {% csrf_token %}
+
+                    {{form.as_p}}
+
+                    <div class="text-center">
+                        <button class='btn btn-warning'>Registrarse</button> 
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    
+
+{% endblock content %}
+
+
+
